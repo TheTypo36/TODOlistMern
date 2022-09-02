@@ -1,9 +1,14 @@
+import CreateTask from './CreateTask.js';
+import TaskList from './TaskList.js'
 import "../styles/App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>let's start to do list</h1>
+      {/* CreateTask component */}
+      <CreateTask />
+      {/* TaskList componnent */}
+      <TaskList />
     </div>
   );
 }

@@ -1,3 +1,9 @@
-* {
-  margin: 0;
+.App{
+  width: 1000px;
+  max-width: 85vw;
+  height: auto;
+  background-color: #D9CAEF;
+  padding: 15px;
+  box-shadow: 0px 18px 53px 0px rgba(0, 0, 0, 3);
 }
+
