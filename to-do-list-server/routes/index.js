@@ -1,8 +1,8 @@
 import express from "express";
-import home from "../controllers/homeController.js";
-
 const router = express.Router();
+import {home,addTask,getTask} from "../controllers/homeController.js";
 
 router.get("/", home);
-
+router.get("/get-task",getTask);
+router.post("/add-task",addTask);
 export default router;

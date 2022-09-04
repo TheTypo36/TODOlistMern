@@ -1,6 +1,6 @@
-.Task-list{
-    width: inherit;
-    display:flex;
-    flex-direction:column;
-    padding: 10px;
+.Task-list {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }

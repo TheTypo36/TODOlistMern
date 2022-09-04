@@ -1,44 +1,25 @@
-import react,{useState,useEffect} from 'react';
-import Task from './Task.js';
-import "../styles/TaskList.css"
+import react, { useState, useEffect } from "react";
+import Task from "./Task.js";
+import "../styles/TaskList.css";
+import axios from "axios";
 
-function TaskList(){
-    const [list, setList] = useState([]);
-    useEffect(()=>{
-        setList([
-            {
-            "task": "Attend codechef contest",
-            "date": '1/2/2',
-            "time": '1:00am',
-            "label": "coding",
-            },
-            {
-                "task": "Attend codechef contest",
-                "date": '1/2/2',
-                "time": '1:00am',
-                "label": "coding",
-            },
-            {
-                "task": "Attend codechef contest",
-                "date": '1/2/2',
-                "time": '1:00am',
-                "label": "coding",
-             },
-            ]);
-    },[]);
-    return(
-        <div className="Task-list">
-            {list.map((task)=>(
-                <div>
-                    <Task 
-                        key={`todo ${task.time}`}
-                        name={task.task} 
-                        date={task.date} 
-                        time={task.time}
-                    />
-                </div>
-            ))}
+function TaskList(props) {
+  const list = props.list;
+  return (
+    <div className="Task-list">
+      {/* {console.log("list", list)} */}
+      {list.map((task) => (
+        <div>
+          {console.log("name", task.TaskName)}
+          <Task
+            key={`todo${task.time}`}
+            TaskName={task.TaskName}
+            date={task.date}
+            time={task.time}
+          />
         </div>
-    );
+      ))}
+    </div>
+  );
 }
 export default TaskList;
