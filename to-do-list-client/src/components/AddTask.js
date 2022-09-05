@@ -14,6 +14,9 @@ function AddTask(props) {
       .then((res) => {
         console.log(res);
         props.setList([...props.list, res.data]);
+        event.target.elements[0].value = "";
+        event.target.elements[1].value = "";
+        event.target.elements[2].value = "";
       })
       .catch((err) => {
         console.log(err);

@@ -1,13 +1,27 @@
 .Task-container {
   width: inherit;
   display: flex;
-  flex-direction: column;
-  color: white;
+  flex-direction: row;
+  justify-content: space-between;
+  color: rgb(115, 103, 103);
   font-size: 1.2rem;
   border: 1px solid white;
   margin: 5px;
   padding: 10px;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 3);
+}
+.task-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-weight: bold;
+}
+.task-detail button {
+  cursor: pointer;
+}
+.task-detail button img {
+  width: 30px;
+  object-fit: cover;
 }
 .Task-container:hover {
   transform: scale(1.2, 1.2);

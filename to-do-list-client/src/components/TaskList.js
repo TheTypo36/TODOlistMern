@@ -7,15 +7,16 @@ function TaskList(props) {
   const list = props.list;
   return (
     <div className="Task-list">
-      {/* {console.log("list", list)} */}
-      {list.map((task) => (
+      {console.log("list", list)}
+      {list.map((task, index) => (
         <div>
           {console.log("name", task.TaskName)}
           <Task
-            key={`todo${task.time}`}
             TaskName={task.TaskName}
             date={task.date}
             time={task.time}
+            keyId={task._id}
+            setList={props.setList}
           />
         </div>
       ))}
