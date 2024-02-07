@@ -6,7 +6,7 @@ function Task(props) {
   const handleDelete = (event) => {
     //  console.log(event.target.parentElement.parentElement);
     axios
-      .post("http://localhost:5005/delete-task", {
+      .post("delete-task", {
         _id: props.keyId,
       })
       .then((res) => {

@@ -1,12 +1,12 @@
 import axios from "../api/Axios.js";
-import "../styles/CreateTask.css";
+import "../styles/AddTask.css";
 
 function AddTask(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     //console.log(event.target.elements[2].value);
     axios
-      .post("http://localhost:5005/add-task", {
+      .post("add-task", {
         TaskName: event.target.elements[0].value,
         date: event.target.elements[1].value,
         time: event.target.elements[2].value,

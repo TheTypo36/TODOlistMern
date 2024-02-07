@@ -1,11 +1,13 @@
 import express, { urlencoded } from "express";
+import 'dotenv/config'
 import mongoose from "mongoose";
 import routes from "./routes/index.js";
 import cors from "cors";
 const app = express();
-const connection_url =
-  "mongodb+srv://thetypo36:36'ashish@cluster0.citfudc.mongodb.net/?retryWrites=true&w=majority";
-
+const DATABASE = process.env.DATABASE;
+console.log(DATABASE);
+const connection_url = DATABASE;
+console.log(process.env.PORT);
 const port = process.env.PORT || 5005;
 app.use(cors());
 app.use(express.urlencoded());
