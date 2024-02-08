@@ -5,7 +5,7 @@ const home = (req, res) => {
 };
 const addTask = (req, res) => {
   Task.create(req.body, (err, data) => {
-    //console.log("here", req.body);
+    console.log("here", req.body);
     if (err) {
       return res.status(500).send(err);
     } else {
